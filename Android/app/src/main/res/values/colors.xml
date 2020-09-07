@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="background">#EFEFEF</color>
+    <color name="appWhite80Opacity">#EEEDEDED</color>
+    <color name="darkBlue">#131eec</color>
+    <color name="blue">#3e7ff6</color>
+    <color name="lightBlue">#6f9ef5</color>
+    <color name="levelOne">#FE9D20</color>
+    <color name="menuLevelCardBackground">#e0e0e0</color>
+    <color name="menuLevelCardLockedBackground">#ababab</color>
+    <color name="menuLevelCardLevelNumber">#C0C0C0</color>
+    <color name="kiwi">#7AC70C</color>
+    <color name="blueberry">#1CB0F6</color>
+    <color name="raspberry">#D33131</color>
+    <color name="banana">#FFB020</color>
+    <color name="pumpkin">#FA811B</color>
+    <color name="jelly">#8549BA</color>
+    <color name="cocoa">#864E1B</color>
+    <color name="licorice">#4C4C4C</color>
+    <color name="cloud">#CFCFCF</color>
+    <color name="creme">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#A8A8A8</color>
+    <color name="transparent">#00000000</color>
+    <color name="black_50_opacity">#80000000</color>
+    <color name="row_level_item">#E1E1E1</color>
+    <color name="row_level_number">#CFCFCF</color>
+    <color name="violet">#AB31D4</color>
+    <color name="estimation_red">#EB5E37</color>
+    <color name="estimation_green">#23A052</color>
+    <color name="yellow">#FFF700</color>
+</resources>
