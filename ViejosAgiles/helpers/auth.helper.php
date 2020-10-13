@@ -8,9 +8,9 @@ class AuthHelper{
     } 
 
     public function login($usuario){
-        $_SESSION['id_usuario']=$usuario->id_usuario;
+        $_SESSION['id_usuario']=$usuario->dni;
         $_SESSION['nombre']=$usuario->nombre;
-        $_SESSION['usuario_admin']=$usuario->usuario_admin;
+        $_SESSION['usuario_admin']=$usuario->es_admin;
     }  
     public function logout(){
         session_destroy();
