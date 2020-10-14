@@ -2,6 +2,8 @@ package ar.edu.uade.scrumgame.presentation.view.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,7 +26,10 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
+
 public class LoginFragment extends BaseFragment implements LoginView {
+    private Button btnlink;
+    private String url;
 
     public interface LoginListener {
         void onLogin();
@@ -153,9 +158,13 @@ public class LoginFragment extends BaseFragment implements LoginView {
     //@Override
     @OnClick(R.id.signup2)
     public void clickEvent() {
-       System.out.println("Hola Mundoo");
-    }
+        url="http://www.google.com.ar/";
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
 
+    }
+    
 
 
     @Override
