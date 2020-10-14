@@ -61,19 +61,22 @@ class LoginController
         $genero = $_POST['genero'];
         $email = $_POST['email'];
 
-        $user = $this->model->getUsuario($email);
-
-        if (empty($user)) {
+        $user = $this->model->getUsuario($email, $dni);
+        
+        if (empty($user) && !empty($nombre) && !empty($apellido) && !empty($dni) && !empty($fecha_nac) && !empty($genero) && !empty($email)) {
             //no esta registrado un usuario en la bd -> lo registro
             $id_jugador = $this->model->guardarJugador($nombre, $apellido, $dni, $fecha_nac, $genero, $email);
             //  $id_usuario = $this->model->guardarJugador($nombre, $apellido, $dni, $fecha_nac, $genero, $email);
             // $usuario = $this->model->traerJugador($id_usuario);
             //    $this->authHelper->login($usuario);
-            header('Location: ' . LOGIN);
+            $this->view->error("Su solicitud ha sido enviada, cheque su mail en las proximas 24 - 48hs");
         } else if (!empty($user)) {
 
-            $this->view->showRegistroJugador("El mail ya esta registrado");
+            $this->view->error("Este usuario ya ha enviado una solicitud");
         }
+        else
+        $this->view->error("Existen campo/s sin completar.");
+    
     }
     public function mostrarJugadores()
     {

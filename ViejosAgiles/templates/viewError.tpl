@@ -1,6 +1,7 @@
 {include file='header.tpl'}
-<div class="productos">
-    <h1>Error!</h1>
-    <h2>{$msgError}</h2>
+<div>
+    
+    <h2>{$error}</h2>
 </div>
+<a class="btn" href="saveJugador"> Volver</a>
 {include file='footer.tpl'}

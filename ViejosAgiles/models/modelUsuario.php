@@ -8,10 +8,10 @@ class ModelUsuario
     {
         $this->db = new PDO('mysql:host=localhost;dbname=db_scrumgame;charset=utf8', 'root', '');
     }
-    public function getUsuario($email)
+    public function getUsuario($email, $dni)
     {
-        $query = $this->db->prepare('SELECT * FROM jugador WHERE email=?');
-        $query->execute(array($email));
+        $query = $this->db->prepare('SELECT * FROM jugador WHERE email=? OR dni=?');
+        $query->execute(array($email, $dni));
         return $query->fetch(PDO::FETCH_OBJ);
     }
     public function recibirNombreJugador($nombre)

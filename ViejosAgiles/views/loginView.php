@@ -37,6 +37,10 @@ class LoginView
         $this->smarty->assign('usuarios', $usuarios);
         $this->smarty->display('templates/usuarios.tpl');
     }
+    public function error($error = null){
+        $this->smarty->assign('error', $error);
+        $this->smarty->display('templates/viewError.tpl');  
+    }
 
 
     // {if($usuario->usuario_admin==$producto->id_categoria_fk)} selected {/if}>              
