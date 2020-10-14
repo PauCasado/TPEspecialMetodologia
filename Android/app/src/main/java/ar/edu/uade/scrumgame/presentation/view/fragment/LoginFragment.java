@@ -158,7 +158,7 @@ public class LoginFragment extends BaseFragment implements LoginView {
     //@Override
     @OnClick(R.id.signup2)
     public void clickEvent() {
-        url="http://www.google.com.ar/";
+        url="http://localhost/ViejosAgiles/saveJugador";
         Uri uri = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);
