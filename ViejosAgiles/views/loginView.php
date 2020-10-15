@@ -37,9 +37,9 @@ class LoginView
         $this->smarty->assign('usuarios', $usuarios);
         $this->smarty->display('templates/usuarios.tpl');
     }
-    public function error($error = null){
-        $this->smarty->assign('error', $error);
-        $this->smarty->display('templates/viewError.tpl');  
+    public function viewMensaje($msg = null){
+        $this->smarty->assign('msg', $msg);
+        $this->smarty->display('templates/viewMsg.tpl');  
     }
 
 
