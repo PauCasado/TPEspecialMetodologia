@@ -100,12 +100,12 @@ class LoginController
         $this->model->generarUsuarioClave($user->email,$clave_encriptada,$id);
         $sendMail= $this->mailHelper->sendMail($clave, $user->email, $user->email);
                     if($sendMail){
-                        $this->view->viewMensaje("El mail ha sido enviado a ". $user->mail);
+                        $this->view->viewMensaje("El mail ha sido enviado " );
 
                     }else{
                         $this->view->viewMensaje("Error al mandar mail");
                     }
-        header('Location: ' . INICIO);
+      
     }
     public function rechazarUsuario($params = null)
     {
