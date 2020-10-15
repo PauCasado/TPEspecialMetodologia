@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:focusableInTouchMode="true"
-        android:focusable="true">
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:visibility="visible">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -84,6 +84,7 @@
                     android:paddingStart="10dp"
                     android:paddingLeft="10dp" />
 
+
                 <Button
                     android:id="@+id/login"
                     android:layout_width="wrap_content"
@@ -101,12 +102,25 @@
                     android:textSize="18sp"
                     app:fontFamily="@font/montserrat_regular" />
 
+                <TextView
+                    android:id="@+id/alreadyRegistered"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:text="¿Queres jugar?, solicita el acceso."
+                    android:textSize="16sp"
+                    android:visibility="visible"
+                    app:fontFamily="@font/montserrat_regular" />
+                <!--                    android:text="@string/login_not_yet_registered"-->
                 <Button
                     android:id="@+id/signup2"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="58dp"
                     android:layout_gravity="center"
                     android:background="@drawable/button_round_purple_border"
+                    android:onClick="clickEvent"
                     android:padding="10dp"
                     android:paddingStart="40dp"
                     android:paddingLeft="40dp"
@@ -115,20 +129,6 @@
                     android:text="pedir acceso"
                     android:textColor="@color/jelly"
                     android:textSize="18sp"
-                    app:fontFamily="@font/montserrat_regular"
-                    android:onClick="clickEvent"
-                    />
-
-
-                <TextView
-                    android:id="@+id/alreadyRegistered"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="10dp"
-                    android:text="@string/login_not_yet_registered"
-                    android:textSize="16sp"
                     app:fontFamily="@font/montserrat_regular" />
 
                 <Button
@@ -141,6 +141,7 @@
                     android:text="@string/login_sign_up"
                     android:textColor="@color/jelly"
                     android:textSize="18sp"
+                    android:visibility="gone"
                     app:fontFamily="@font/montserrat_regular" />
 
                 <LinearLayout
@@ -171,6 +172,6 @@
 
     </ScrollView>
 
-    <include layout="@layout/view_progress"/>
+    <include layout="@layout/view_progress" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
