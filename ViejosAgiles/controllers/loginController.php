@@ -2,18 +2,21 @@
 include_once('./models/modelUsuario.php');
 include_once('./views/loginView.php');
 include_once('./helpers/auth.helper.php');
+include_once('helpers/mail.helper.php');
 
 class LoginController
 {
     private $view;
     private $model;
     private $authHelper;
+    private $mailHelper;
 
     public function __construct()
     {
         $this->view = new LoginView();
         $this->model = new ModelUsuario();
         $this->authHelper = new AuthHelper();
+        $this->mailHelper = new MailHelper();
     }
     public function iniciarSesion()
     {
@@ -38,7 +41,7 @@ class LoginController
         $contrasena = $_POST['contraseña'];
        //buscar datos del que intenta loguearse 
        //verificar contraseña y si es administrador
-        $usuario = $this->model->getUsuario($nombre);
+        $usuario = $this->model->obtenerNombreUsuario($nombre);
         if (!empty($usuario) && password_verify($contrasena, $usuario->clave)&& ($usuario->es_admin==1)) {
             $this->authHelper->login($usuario);
             header('Location: ' . INICIO);
@@ -61,21 +64,21 @@ class LoginController
         $genero = $_POST['genero'];
         $email = $_POST['email'];
 
-        $user = $this->model->getUsuario($email, $dni);
+        //se chequean que los campos obligatorios esten completos     
         
-        if (empty($user) && !empty($nombre) && !empty($apellido) && !empty($dni) && !empty($fecha_nac) && !empty($genero) && !empty($email)) {
-            //no esta registrado un usuario en la bd -> lo registro
-            $id_jugador = $this->model->guardarJugador($nombre, $apellido, $dni, $fecha_nac, $genero, $email);
-            //  $id_usuario = $this->model->guardarJugador($nombre, $apellido, $dni, $fecha_nac, $genero, $email);
-            // $usuario = $this->model->traerJugador($id_usuario);
-            //    $this->authHelper->login($usuario);
-            $this->view->error("Su solicitud ha sido enviada, cheque su mail en las proximas 24 - 48hs");
+        if (!empty($nombre) && !empty($apellido) && !empty($dni) && !empty($fecha_nac) && !empty($genero) && !empty($email)) {
+            //consulto si hay un usuario ya registrado con ese email o dni
+            $user = $this->model->getUsuario($email, $dni);
+            if (empty($user) ){ 
+            //si no existe un usuario en la bd con ese usuario y email -> le doy de alta en la  bd 
+           $this->model->guardarJugador($nombre, $apellido, $dni, $fecha_nac, $genero, $email);
+            $this->view->viewMensaje("Su solicitud ha sido enviada, cheque su mail en las proximas 24 - 48hs");
         } else if (!empty($user)) {
 
-            $this->view->error("Este usuario ya ha enviado una solicitud");
-        }
+            $this->view->viewMensaje("Este usuario ya ha enviado una solicitud");
+        }}
         else
-        $this->view->error("Existen campo/s sin completar.");
+        $this->view->viewMensaje("Existen campo/s sin completar.");
     
     }
     public function mostrarJugadores()
@@ -95,6 +98,13 @@ class LoginController
          $clave=$user->nombre.$user->apellido;
         $clave_encriptada = password_hash($clave, PASSWORD_DEFAULT);
         $this->model->generarUsuarioClave($user->email,$clave_encriptada,$id);
+        $sendMail= $this->mailHelper->sendMail($clave, $user->email, $user->email);
+                    if($sendMail){
+                        $this->view->viewMensaje("El mail ha sido enviado a ". $user->mail);
+
+                    }else{
+                        $this->view->viewMensaje("Error al mandar mail");
+                    }
         header('Location: ' . INICIO);
     }
     public function rechazarUsuario($params = null)
