@@ -1,7 +1,7 @@
 {include file='header.tpl'}
 <div class='usuario'>
     {if isset($username)}
-        <h1>Usuarios-Administradores</h1>
+        <h1>Lista de pedidos de usuarios</h1>
         <table class="tablaUsuario col-md-10" >
             <tr class="tablaUsuario">
                 <th class="tabla_usuario">Nombre</th>
@@ -45,17 +45,19 @@
     {/if}
 <div>
 
-<form action="enviarInvitacion" method="POST" class="col-md-4 offset-md-4 mt-4">
-<h1>{$titulo}</h1>
+<form action="enviarInvitacion" method="POST" class=" col-md-4 offset-md-4 mt-4">
+<h1>Invitación</h1>
 <div class="row">
 <div class="form-row">
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-12">
         <label>Email:</label>
         <input type="email" class="form-control" name="email" placeholder="Email">
     </div>
     
 </div>
-<button type="submit" action="enviarInvitacion">Enviar Invitacion</button>
+<div class="form-group col-md-6">
+    <button type="submit" class="btn btn-primary" action="enviarInvitacion">Enviar Invitacion</button>
+</div>
 </form>
 
 {include file='footer.tpl'}
