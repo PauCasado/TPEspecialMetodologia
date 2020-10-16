@@ -127,4 +127,14 @@ class LoginController
       //  $this->model->aceptarJugador($id, $valor);
         header("Location: " . INICIO);
     }
+    public function enviarInvitacion(){
+        $email = $_POST['email'];
+        $sendInvitacion= $this->mailHelper->sendInvitacion($email);
+        if($sendInvitacion){
+            $this->view->viewMensaje("Invitación enviada " );
+
+        }else{
+            $this->view->viewMensaje("Error, no pudo enviar la invitación");
+        }
+    }
 }

@@ -13,7 +13,6 @@ require_once("phpmailer/class.smtp.php");
         $smtpClave = "ViejosAgiles2020";  // Mi contraseña
         $mail = new PHPMailer();
         $mail->IsSMTP();
-        $mail->SMTPDebug = 2;
         $mail->SMTPAuth = true;
         $mail->Port = 587; 
         $mail->SMTPSecure = 'tls';
@@ -26,7 +25,7 @@ require_once("phpmailer/class.smtp.php");
         $mail->FromName = $nombre;
         $mail->AddAddress($direccion); // Direccion de mail donde enviamos
         $mail->Subject = "Solicitud de acceso"; // Este es el titulo del email.
-        $mail->Body = "
+      $mail->Body= "
         <html> 
 
         <body> 
@@ -41,7 +40,7 @@ require_once("phpmailer/class.smtp.php");
 
         </html>
 
-        ";
+        " ;
          $mail->SMTPOptions = array(
             'ssl' => array(
                 'verify_peer' => false,
@@ -49,11 +48,52 @@ require_once("phpmailer/class.smtp.php");
                 'allow_self_signed' => true
             )
         ); 
-        $success = $mail->send();
-        if($success){
+        return $mail->send();
+       /*if($success){
             return TRUE;
             }else{
                 return FALSE;
-            }
+            }*/
+        }
+
+        public function sendInvitacion( $direccion){
+            $nombre= "ScrumGame";
+            $smtpHost = "smtp.gmail.com";  // Server Smtp que utilizo
+            $smtpUsuario ="viejosagiles@gmail.com";  // Cuenta de gmail
+            $smtpClave = "ViejosAgiles2020";  // Mi contraseña
+            $mail = new PHPMailer();
+            $mail->IsSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Port = 587; 
+            $mail->SMTPSecure = 'tls';
+            $mail->IsHTML(true); 
+            $mail->CharSet = "utf-8";
+            $mail->Host = $smtpHost; 
+            $mail->Username = $smtpUsuario; 
+            $mail->Password = $smtpClave;
+            $mail->From = $smtpUsuario; // Email desde donde envio el correo.
+            $mail->FromName = $nombre;
+            $mail->AddAddress($direccion); // Direccion de mail donde enviamos
+            $mail->Subject = "Invitacion a Scrum game"; // Este es el titulo del email.
+          $mail->Body= "
+            <html> 
+    
+            <body> 
+            <h1>Para aceptar la invitacion, ingresa al siguiente link.</h1>
+            <a href='http://localhost/ViejosAgiles/saveJugador'>ScrumGame </a>
+    
+            </body> 
+    
+            </html>
+    
+            " ;
+             $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            ); 
+            return $mail->send();
         }
     }

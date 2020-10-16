@@ -18,6 +18,7 @@ $r->addRoute('verListaUsuarios', 'GET', 'loginController', 'mostrarJugadores');
 $r->addRoute('generarUsuario/:ID', 'GET', 'loginController', 'generarUsuario');
 $r->addRoute('rechazarUsuario/:ID', 'GET', 'loginController', 'rechazarUsuario');
 $r->addRoute('agregarComoAdmin/:ID', 'POST', 'loginController', 'cambiarComoAdmin');
+$r->addRoute('enviarInvitacion', 'POST', 'loginController', 'enviarInvitacion');
 
 
 //ruta por defecto
