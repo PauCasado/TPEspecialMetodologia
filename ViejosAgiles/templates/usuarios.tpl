@@ -55,7 +55,7 @@
     </div>
     
 </div>
-<a href="enviarInvitacion">Enviar Invitacion</a>
+<button type="submit" action="enviarInvitacion">Enviar Invitacion</button>
 </form>
 
 {include file='footer.tpl'}
