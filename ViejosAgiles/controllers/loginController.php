@@ -111,6 +111,7 @@ class LoginController
     {
         $id = $params[':ID'];
         $this->model->eliminarDatosJugador($id);
+       $rechazo= $this->mailHelper->enviarNotificacionRechazo($email);
         header('Location: ' . INICIO);
     }
     public function cambiarComoAdmin($params = null)

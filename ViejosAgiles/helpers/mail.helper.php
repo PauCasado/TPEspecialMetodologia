@@ -96,4 +96,45 @@ require_once("phpmailer/class.smtp.php");
             ); 
             return $mail->send();
         }
+
+        public function enviarNotificacionRechazo( $direccion){
+            $nombre= "ScrumGame";
+            $smtpHost = "smtp.gmail.com";  // Server Smtp que utilizo
+            $smtpUsuario ="viejosagiles@gmail.com";  // Cuenta de gmail
+            $smtpClave = "ViejosAgiles2020";  // Mi contraseña
+            $mail = new PHPMailer();
+            $mail->IsSMTP();
+            $mail->SMTPAuth = true;
+            $mail->Port = 587; 
+            $mail->SMTPSecure = 'tls';
+            $mail->IsHTML(true); 
+            $mail->CharSet = "utf-8";
+            $mail->Host = $smtpHost; 
+            $mail->Username = $smtpUsuario; 
+            $mail->Password = $smtpClave;
+            $mail->From = $smtpUsuario; // Email desde donde envio el correo.
+            $mail->FromName = $nombre;
+            $mail->AddAddress($direccion); // Direccion de mail donde enviamos
+            $mail->Subject = "Respuesta a solicitud a Scrum game"; // Este es el titulo del email.
+          $mail->Body= "
+            <html> 
+    
+            <body> 
+            <h1>Usted ha sido rechazado</h1>    
+            </body> 
+    
+            </html>
+    
+            " ;
+             $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            ); 
+            return $mail->send();
+        }
+
+
     }
