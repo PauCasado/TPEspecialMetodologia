@@ -110,8 +110,10 @@ class LoginController
     public function rechazarUsuario($params = null)
     {
         $id = $params[':ID'];
+   
+        $user=$this->model->getUsuarioPorDni($id);
         $this->model->eliminarDatosJugador($id);
-       $rechazo= $this->mailHelper->enviarNotificacionRechazo($email);
+       $rechazo= $this->mailHelper->enviarNotificacionRechazo($user->email);
         header('Location: ' . INICIO);
     }
     public function cambiarComoAdmin($params = null)
