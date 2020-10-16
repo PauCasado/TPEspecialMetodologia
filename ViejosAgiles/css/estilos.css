@@ -42,11 +42,6 @@ td {
     margin: 30px;
 }
 
-.productos {
-    padding-left: 30PX;
-    padding-right: 30PX;
-    border: 15px;
-}
 
 h1 {
     text-decoration: underline;
@@ -58,11 +53,6 @@ h1 {
     border: 15px;
 }
 
-.categorias {
-    padding-left: 30PX;
-    padding-right: 30PX;
-    border: 15px;
-}
 
 .navbar-brand {
     color: rgb(155, 60, 245) !important;
