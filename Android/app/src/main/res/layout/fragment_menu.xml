@@ -36,6 +36,7 @@
             android:padding="10dp"
             android:paddingStart="40dp"
             android:paddingLeft="40dp"
+
             android:paddingEnd="40dp"
             android:paddingRight="40dp"
             android:textColor="@color/jelly"
