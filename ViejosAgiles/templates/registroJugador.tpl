@@ -1,6 +1,6 @@
 {include 'templates/header.tpl'}
  
-  <h2>Formulario de solicitud de acceso a Scrum Game</h2>
+  <h2>Solicitud de acceso a Scrum Game</h2>
   <form action="saveJugador" class="formularioEnvio" method="POST">
     <div class="form-group">
       <label >Nombre</label>

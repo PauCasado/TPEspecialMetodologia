@@ -25,18 +25,13 @@ class LoginController
         $this->view->verLogin();
     }
 
-    public function showRegistroJugador()
-    {
-        /*  // obtengo inmuebles del model
-        $inmuebles = $this->model->getAll(); */
-
+    public function showRegistroJugador(){
         // se las paso a la vista
         $this->view->showRegistroJugador();
     }
 
 
-    public function verificarUsuario()
-    {
+    public function verificarUsuario(){
         $nombre = $_POST['nombre'];
         $contrasena = $_POST['contraseña'];
        //buscar datos del que intenta loguearse 
@@ -81,10 +76,8 @@ class LoginController
         $this->view->viewMensaje("Existen campo/s sin completar.");
     
     }
-    public function mostrarJugadores()
-    {
+    public function mostrarJugadores(){
         $this->authHelper->chequearUsuarioRegistrado();
-
         $usuarios = $this->model->traerJugadores();
         $this->view->verUsuarios($usuarios);
     }

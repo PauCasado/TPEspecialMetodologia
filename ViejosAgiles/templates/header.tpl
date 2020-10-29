@@ -14,21 +14,27 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav auto">
-              <li class="nav-item active col-md-3">
-                <a class="nav-link" id="" href="saveJugador">Scrum Game<span class="sr-only">(current)</span></a>
+              <li class="nav-item active ">
+                <a class="nav-link scrum-nav" id="" href="saveJugador">Scrum Game<span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item active col-md-3">
+              <li class="nav-item active ">
                 <a class="nav-link" id="" href="saveJugador">Pedir acceso<span class="sr-only">(current)</span></a>
               </li>
                <!-- formulario de acceso al juego -->          
-              
-                <li class="nav-item active col-md-3">
-                  <a class="nav-link" id="" href="login">Iniciar Sesion</a> <span class="sr-only">(current)</span></a>
+              {if !isset ($username)} 
+                <li class="nav-item active ">
+                  <a class="nav-link" id="" href="login">Iniciar Sesion <span class="sr-only">(current)</span></a>
                 </li>
+              {/if}
+               {if isset ($username)}
+                <li class="nav-item active ">
+                  <a class="nav-link" id="" href="verListaUsuarios">Usuarios <span class="sr-only">(current)</span></a>
+                </li>
+              {/if} 
                 <!-- iniciar sesion -- a la vista de todes-->
         
                 {if isset ($username)}
-                <li class="navbar-nav ml-auto col-md-3">
+                <li class="navbar-nav ml-active ">
                     <span class="navbar-text">{$username}</span>
                     <a class="nav-item nav-link" href="logout">Cerrar Sesion</a>
                 </li>
