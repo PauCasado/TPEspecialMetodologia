@@ -185,6 +185,15 @@
                     android:textColor="@color/jelly" android:textSize="20sp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/puntaje"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/gotham_rounded_light"
+                android:text="Puntaje"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/jelly" android:textSize="20sp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/game_time_tv"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"

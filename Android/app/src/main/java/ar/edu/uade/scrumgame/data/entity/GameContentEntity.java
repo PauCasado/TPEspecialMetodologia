@@ -4,6 +4,7 @@ public class GameContentEntity {
     private String type;
     private Boolean isCorrect;
     private String data;
+    private int puntaje = 1;
 
     public GameContentEntity() {
     }
@@ -30,5 +31,13 @@ public class GameContentEntity {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
     }
 }

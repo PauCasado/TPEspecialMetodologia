@@ -24,6 +24,8 @@ public class UserModel {
 
     private String gameTimeLevel;
 
+    private int puntaje;
+
     public String getName() {
         return name;
     }
@@ -64,6 +66,14 @@ public class UserModel {
         this.uid = uid;
     }
 
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
+
     public UserModel(String name, String mail, int age, String profession, String uid, String city, String gender, String state, String country, String gameTasteLevel, String gameTimeLevel) {
         this.name = name;
         this.mail = mail;
@@ -76,6 +86,7 @@ public class UserModel {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
+        this.puntaje = 1000;
     }
 
     public UserModel() {
