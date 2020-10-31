@@ -24,7 +24,7 @@ public class User  {
 
     private String gameTimeLevel;
 
-    private int puntaje;
+    private int puntaje = 10;
 
     public String getName() {
         return name;
@@ -66,13 +66,7 @@ public class User  {
         this.uid = uid;
     }
 
-    public int getPuntaje() {
-        return puntaje;
-    }
 
-    public void setPuntaje(int puntaje) {
-        this.puntaje = puntaje;
-    }
 
     public User(String name, String mail, int age, String profession, String uid, String city, String gender, String state, String country, String gameTasteLevel, String gameTimeLevel) {
         this.name = name;
@@ -86,7 +80,7 @@ public class User  {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
-        this.puntaje = 1000;
+        this.puntaje = 100;
     }
 
     public User() {
@@ -139,6 +133,13 @@ public class User  {
 
     public void setGameTimeLevel(String gameTimeLevel) {
         this.gameTimeLevel = gameTimeLevel;
+    }
+    public int getPuntaje() {
+        return puntaje;
+    }
+
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
     }
 
 }

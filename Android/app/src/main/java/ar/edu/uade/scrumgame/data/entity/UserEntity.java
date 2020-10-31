@@ -15,7 +15,7 @@ public class UserEntity implements RealmModel {
 
     private String profession;
 
-    private int puntaje;
+    private int puntaje = 100;
 
     @PrimaryKey
     private String uid;
@@ -92,7 +92,7 @@ public class UserEntity implements RealmModel {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
-        this.puntaje = 1000;
+        this.puntaje = 100;
     }
 
     public UserEntity() {
