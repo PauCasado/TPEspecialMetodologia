@@ -2,12 +2,15 @@ package ar.edu.uade.scrumgame.presentation.view.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -26,11 +29,17 @@ import ar.edu.uade.scrumgame.presentation.models.UserModel;
 import ar.edu.uade.scrumgame.presentation.models.UserOverallDataModel;
 import ar.edu.uade.scrumgame.presentation.presenter.MenuPresenter;
 import ar.edu.uade.scrumgame.presentation.view.LevelListView;
+import ar.edu.uade.scrumgame.presentation.view.activity.MenuActivity;
+import ar.edu.uade.scrumgame.presentation.view.activity.PosicionesActivity;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsAdapter;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsLayoutManager;
+
+
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 import com.squareup.picasso.Picasso;
 
 public class MenuFragment extends BaseFragment implements LevelListView {
@@ -38,6 +47,9 @@ public class MenuFragment extends BaseFragment implements LevelListView {
         void onLevelClicked(LevelModel levelModel);
 
         void navigateToProfile(UserModel loggedInUser);
+
+        void tabla();
+
     }
 
     @Inject
@@ -54,6 +66,9 @@ public class MenuFragment extends BaseFragment implements LevelListView {
     Button retryButton;
     @BindView(R.id.iv_profile_picture)
     ImageView profilePicture;
+    @BindView(R.id.tabla_pos)
+    Button tabla_posiciones;
+
     private LevelListListener levelListListener;
 
     @Override
@@ -117,7 +132,7 @@ public class MenuFragment extends BaseFragment implements LevelListView {
             int placeholderDrawable = gender.equals(UserGenderConstant.FEMALE) ? R.drawable.female_avatar : R.drawable.male_avatar;
             Picasso.get().load(placeholderDrawable).into(profilePicture);
             profilePicture.setOnClickListener(v -> {
-                this.levelListListener.navigateToProfile(loggedInUser);             
+                this.levelListListener.navigateToProfile(loggedInUser);
             });
         }
     }
@@ -158,6 +173,14 @@ public class MenuFragment extends BaseFragment implements LevelListView {
     public void onButtonRetryClick() {
         this.loadLevelList();
     }
+
+    @OnClick(R.id.tabla_pos)
+    public void clickEvent() {
+
+        this.levelListListener.tabla();
+    }
+
+
 
     @Override
     public void onResume() {

@@ -24,7 +24,7 @@ public class User  {
 
     private String gameTimeLevel;
 
-    private int puntaje = 10;
+    private int puntaje = 100000;
 
     public String getName() {
         return name;
@@ -80,7 +80,7 @@ public class User  {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
-        this.puntaje = 100;
+
     }
 
     public User() {
@@ -134,6 +134,7 @@ public class User  {
     public void setGameTimeLevel(String gameTimeLevel) {
         this.gameTimeLevel = gameTimeLevel;
     }
+
     public int getPuntaje() {
         return puntaje;
     }

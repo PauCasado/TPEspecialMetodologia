@@ -6,6 +6,8 @@ public class LevelEntity {
     private String name;
     private Integer code;
     private List<SubLevelEntity> sublevels;
+    private int puntaje_nivel;
+
 
     public LevelEntity() {
     }
@@ -32,5 +34,13 @@ public class LevelEntity {
 
     public void setSublevels(List<SubLevelEntity> sublevels) {
         this.sublevels = sublevels;
+    }
+
+    public int getPuntaje_nivel() {
+        return puntaje_nivel;
+    }
+
+    public void setPuntaje_nivel(int puntaje_nivel) {
+        this.puntaje_nivel = puntaje_nivel;
     }
 }
