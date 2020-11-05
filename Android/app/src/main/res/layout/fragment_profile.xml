@@ -40,8 +40,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
         <ImageView
             android:id="@+id/profile_picture_iv"
             android:layout_width="100dp"
@@ -53,7 +53,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/female_avatar" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
@@ -66,8 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:orientation="vertical"
-           >
+            android:orientation="vertical">
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/profile_cg"
@@ -272,10 +270,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginBottom="5dp"
                 android:fontFamily="@font/gotham_rounded_light"
+                android:gravity="center_horizontal"
                 android:textAlignment="center"
                 android:textColor="@color/gray"
-                android:textSize="14sp"
-                android:gravity="center_horizontal" />
+                android:textSize="14sp" />
         </LinearLayout>
 
     </ScrollView>

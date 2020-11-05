@@ -74,9 +74,7 @@ public class MenuActivity extends BaseActivity implements HasComponent<LevelComp
     @Override
     public void tabla() {
         Intent intent = new Intent(MenuActivity.this,PosicionesActivity.class);
-       /* EditText editText = (EditText) findViewById(R.id.tabla_pos);*/
         startActivity(intent);
-
 
     }
 }

@@ -1,5 +1,6 @@
 package ar.edu.uade.scrumgame.presentation.view.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
 import ar.edu.uade.scrumgame.R;
@@ -40,4 +41,13 @@ public class ProfileActivity extends BaseActivity implements HasComponent<LevelC
     public void onLoggedOut() {
         this.navigator.navigateToLogin(this);
     }
+
+    @Override
+    public void verLogros() {
+        Intent intent = new Intent(ProfileActivity.this,LogrosActivity.class);
+        startActivity(intent);
+
+    }
+
+
 }

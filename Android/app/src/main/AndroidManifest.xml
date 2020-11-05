@@ -15,7 +15,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:icon,android:theme">
-        <activity android:name=".presentation.view.activity.PosicionesActivity"></activity>
+        <activity android:name=".presentation.view.activity.LogrosActivity"></activity>
+        <activity android:name=".presentation.view.activity.PosicionesActivity" />
         <activity
             android:name=".presentation.view.activity.SplashScreen"
             android:noHistory="true"

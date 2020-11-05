@@ -29,6 +29,7 @@ import javax.inject.Inject;
 public class ProfileFragment extends BaseFragment implements ProfileView {
     public interface ProfileListener {
         void onLoggedOut();
+        void verLogros();
     }
 
     @Inject
@@ -54,7 +55,7 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
     @BindView(R.id.information_chip)
     Chip information;
     @BindView(R.id.achievements_chip)
-    Chip achievements;
+    Button achievements;
     @BindView(R.id.profile_picture_iv)
     ImageView profilePicture;
     @BindView(R.id.app_version_tv)
@@ -94,7 +95,9 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
 
     private void setUpViews() {
         this.information.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.information, isChecked));
+/*
         this.achievements.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.achievements, isChecked));
+*/
         this.information.setSelected(true);
         this.information.setChecked(true);
     }
@@ -175,6 +178,10 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
     public void goBack() {
         this.getActivity().onBackPressed();
     }
+
+    @OnClick(R.id.achievements_chip)
+    public void logros(){this.profileListener.verLogros();}
+
 
     @Override
     public void profileLoaded(UserModel userProfile) {

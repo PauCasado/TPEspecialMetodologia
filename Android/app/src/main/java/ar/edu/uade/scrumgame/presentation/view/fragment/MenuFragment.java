@@ -2,15 +2,12 @@ package ar.edu.uade.scrumgame.presentation.view.fragment;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.FrameLayout;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
@@ -29,8 +26,6 @@ import ar.edu.uade.scrumgame.presentation.models.UserModel;
 import ar.edu.uade.scrumgame.presentation.models.UserOverallDataModel;
 import ar.edu.uade.scrumgame.presentation.presenter.MenuPresenter;
 import ar.edu.uade.scrumgame.presentation.view.LevelListView;
-import ar.edu.uade.scrumgame.presentation.view.activity.MenuActivity;
-import ar.edu.uade.scrumgame.presentation.view.activity.PosicionesActivity;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsAdapter;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsLayoutManager;
 

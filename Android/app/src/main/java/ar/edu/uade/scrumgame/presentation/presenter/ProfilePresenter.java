@@ -88,6 +88,7 @@ public class ProfilePresenter implements Presenter {
         },null);
     }
 
+
     private final class GetLoggedInUserObserver extends DefaultObserver<User> {
         @Override
         public void onNext(User loggedInUser) {

@@ -33,11 +33,10 @@ public class PosicionesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_posiciones);
 
-       /* mTextViewDataApellido = (TextView) findViewById(R.id.textViewDataApellido);
+        mTextViewDataApellido = (TextView) findViewById(R.id.textViewDataApellido);
         //mTextViewDataNombre = (TextView) findViewById(R.id.textViewDataNombre);
         //mTextViewDataPuntaje = (TextView) findViewById(R.id.textViewDataPuntaje);
         mDatabase = FirebaseDatabase.getInstance().getReference();
-
         mDatabase.child("tabla_posiciones").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -45,18 +44,15 @@ public class PosicionesActivity extends AppCompatActivity {
                     String apellido = dataSnapshot.child("apellido").getValue().toString();
                     String nombre = dataSnapshot.child("nombre").getValue().toString();
                     int puntaje = Integer.parseInt(dataSnapshot.child("puntaje").getValue().toString());
-
                     mTextViewDataApellido.setText(apellido + " " + nombre + " " + puntaje);
                     //mTextViewDataNombre.setText("El nombre es: " + nombre);
                     //mTextViewDataPuntaje.setText("El puntaje es: " + puntaje);
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-
             }
-        });*/
+        });
     }
 
 
