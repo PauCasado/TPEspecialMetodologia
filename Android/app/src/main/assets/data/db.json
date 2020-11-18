@@ -60,33 +60,13 @@
                 {
                   "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "https://i.imgur.com/j3mFiWA.png"
+                  "data": "https://i.imgur.com/b4cU0oc.png"
                 },
                 {
                   "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "https://i.imgur.com/e1l1iPP.png"
+                  "data": "https://i.imgur.com/0YTevjQ.png"
                 }
-                //                {
-                //                  "type": "textAnswer",
-                //                  "isCorrect": true,
-                //                  "data": "Cuando se finalizó la etapa anterior"
-                //                },
-                //                {
-                //                  "type": "textAnswer",
-                //                  "isCorrect": false,
-                //                  "data": "Cuando se revisó la etapa anterior"
-                //                },
-                //                {
-                //                  "type": "textAnswer",
-                //                  "isCorrect": false,
-                //                  "data": "Todas al inicio del proyecto"
-                //                },
-                //                {
-                //                  "type": "textAnswer",
-                //                  "isCorrect": false,
-                //                  "data": "Ninguna de las anteriores"
-                //                }
               ]
             },
             {
@@ -198,12 +178,12 @@
                 {
                   "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "https://i.imgur.com/rX23Rd5.png"
+                  "data": "https://i.imgur.com/iSynYUs.jpg"
                 },
                 {
                   "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "https://i.imgur.com/AUqZVy3.png"
+                  "data": "https://i.imgur.com/zYWAUiw.jpg"
                 }
               ]
             },
