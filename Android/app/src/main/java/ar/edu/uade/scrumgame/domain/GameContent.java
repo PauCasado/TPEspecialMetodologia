@@ -4,6 +4,7 @@ public class GameContent {
     private String type;
     private Boolean isCorrect;
     private String data;
+    private String text;
 
     public GameContent() {
     }
@@ -30,5 +31,13 @@ public class GameContent {
 
     public void setData(String data) {
         this.data = data;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

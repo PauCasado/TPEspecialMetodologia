@@ -55,28 +55,38 @@
             {
               "code": "1.1.1",
               "title": "En cascada, ¿cuando se inicia una etapa?",
-              "type": "textChoiceQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Cuando se finalizó la etapa anterior"
+                  "data": "https://i.imgur.com/j3mFiWA.png"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Cuando se revisó la etapa anterior"
-                },
-                {
-                  "type": "textAnswer",
-                  "isCorrect": false,
-                  "data": "Todas al inicio del proyecto"
-                },
-                {
-                  "type": "textAnswer",
-                  "isCorrect": false,
-                  "data": "Ninguna de las anteriores"
+                  "data": "https://i.imgur.com/e1l1iPP.png"
                 }
+                //                {
+                //                  "type": "textAnswer",
+                //                  "isCorrect": true,
+                //                  "data": "Cuando se finalizó la etapa anterior"
+                //                },
+                //                {
+                //                  "type": "textAnswer",
+                //                  "isCorrect": false,
+                //                  "data": "Cuando se revisó la etapa anterior"
+                //                },
+                //                {
+                //                  "type": "textAnswer",
+                //                  "isCorrect": false,
+                //                  "data": "Todas al inicio del proyecto"
+                //                },
+                //                {
+                //                  "type": "textAnswer",
+                //                  "isCorrect": false,
+                //                  "data": "Ninguna de las anteriores"
+                //                }
               ]
             },
             {

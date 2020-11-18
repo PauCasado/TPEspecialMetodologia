@@ -101,7 +101,7 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
     private void setUpViews() {
         this.information.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.information, isChecked));
 
-//        this.achievements.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.achievements, isChecked));
+//        this.achievements.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedButtonStyle(this.achievements, isChecked));
 
         this.information.setSelected(true);
         this.information.setChecked(true);
@@ -115,6 +115,15 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
             chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.jelly));
         }
     }
+
+    private void changeSelectedButtonStyle(Chip chip, boolean isChecked) {
+        if (isChecked) {
+            chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.white));
+        } else {
+            chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.jelly));
+        }
+    }
+
 
     @Override
     public void onDetach() {
