@@ -285,27 +285,27 @@
             {
               "code": "2.1.2",
               "title": "¿Quién tiene la última decisión sobre el Product Backlog?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Scrum Master"
+                  "data": "https://i.imgur.com/3i0qMtCt.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88Ot.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "El cliente"
+                  "data": "https://i.imgur.com/9awXDAlt.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/oUSgWVyt.png"
                 }
               ]
             },
