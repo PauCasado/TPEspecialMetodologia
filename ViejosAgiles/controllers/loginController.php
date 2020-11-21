@@ -135,9 +135,28 @@ class LoginController
         $sendInvitacion= $this->mailHelper->sendInvitacion($email);
         if($sendInvitacion){
             $this->view->viewMensaje("Invitación enviada " );
-
         }else{
             $this->view->viewMensaje("Error, no pudo enviar la invitación");
+        }
+    }
+
+    public function enviarEncuesta(){
+        $email = $_POST['email'];
+        $p1 = $_POST['preg1'];
+        $p2 = $_POST['preg2'];
+        $p3 = $_POST['preg3'];
+        $p4 = $_POST['preg4'];
+        $p5 = $_POST['preg5'];
+        $p6 = $_POST['preg6'];
+        $p7 = $_POST['preg7'];
+        $p8 = $_POST['preg8'];
+        $p9 = $_POST['preg9'];
+        $p10 = $_POST['preg10'];
+        $sendEncuesta= $this->mailHelper->sendEncuesta($email,$p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10);
+        if($sendEncuesta){
+            $this->view->viewMensaje("Encuesta enviada" );
+        }else{
+            $this->view->viewMensaje("Error, no se pudo enviar la encuesta");
         }
     }
 }
