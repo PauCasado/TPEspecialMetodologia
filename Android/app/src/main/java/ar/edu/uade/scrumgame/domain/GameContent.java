@@ -5,6 +5,7 @@ public class GameContent {
     private Boolean isCorrect;
     private String data;
 
+
     public GameContent() {
     }
 
@@ -31,4 +32,6 @@ public class GameContent {
     public void setData(String data) {
         this.data = data;
     }
+
+
 }

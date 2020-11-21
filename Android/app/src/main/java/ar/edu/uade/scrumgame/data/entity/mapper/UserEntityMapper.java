@@ -26,6 +26,7 @@ public class UserEntityMapper {
         userEntity.setProfession(user.getProfession());
         userEntity.setState(user.getState());
         userEntity.setUid(user.getUid());
+        userEntity.setPuntaje(user.getPuntaje());
         return userEntity;
     }
 
@@ -42,6 +43,7 @@ public class UserEntityMapper {
         user.setProfession(userEntity.getProfession());
         user.setState(userEntity.getState());
         user.setUid(userEntity.getUid());
+        user.setPuntaje(userEntity.getPuntaje());
         return user;
     }
 

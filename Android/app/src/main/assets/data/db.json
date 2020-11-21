@@ -55,27 +55,17 @@
             {
               "code": "1.1.1",
               "title": "En cascada, ¿cuando se inicia una etapa?",
-              "type": "textChoiceQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Cuando se finalizó la etapa anterior"
+                  "data": "https://i.imgur.com/b4cU0oc.png"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Cuando se revisó la etapa anterior"
-                },
-                {
-                  "type": "textAnswer",
-                  "isCorrect": false,
-                  "data": "Todas al inicio del proyecto"
-                },
-                {
-                  "type": "textAnswer",
-                  "isCorrect": false,
-                  "data": "Ninguna de las anteriores"
+                  "data": "https://i.imgur.com/0YTevjQ.png"
                 }
               ]
             },
@@ -188,12 +178,12 @@
                 {
                   "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "https://i.imgur.com/rX23Rd5.png"
+                  "data": "https://i.imgur.com/iSynYUs.jpg"
                 },
                 {
                   "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "https://i.imgur.com/AUqZVy3.png"
+                  "data": "https://i.imgur.com/zYWAUiw.jpg"
                 }
               ]
             },
@@ -295,54 +285,58 @@
             {
               "code": "2.1.2",
               "title": "¿Quién tiene la última decisión sobre el Product Backlog?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Scrum Master"
+                  "data": "https://i.imgur.com/tGXzRDbh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88Oh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "El cliente"
+                  "data": "https://i.imgur.com/9awXDAlt.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/zV0bCF6h.png"
                 }
               ]
             },
             {
               "code": "2.1.3",
               "title": "¿Quién es el responsable por el progreso del trabajo durante el Sprint?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+//                  scrum master
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Scrum Master"
+                  "data": "https://i.imgur.com/tGXzRDbh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //dev
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88Oh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //cliente
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "El cliente"
+                  "data": "https://i.imgur.com/9awXDAlh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //product
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/zV0bCF6h.png"
                 }
               ]
             }
@@ -440,27 +434,27 @@
             {
               "code": "2.2.1",
               "title": "¿Quién tiene la última decisión en el orden del Product Backlog?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Scrum Master"
+                  "data": "https://i.imgur.com/tGXzRDbh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88Oh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/zV0bCF6h.png"
                 },
                 {
-                  "type": "textAnswer",
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "El CEO"
+                  "data": "https://i.imgur.com/xfeKVIIh.png"
                 }
               ]
             },
@@ -516,27 +510,31 @@
             {
               "code": "2.2.4",
               "title": "¿Quién es el responsable de manejar el progreso de trabajo durante el Sprint?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  //scrum master
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Scrum Master"
+                  "data": "https://i.imgur.com/tGXzRDbh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //dev
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88Oh.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //PO
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/zV0bCF6h.png"
                 },
                 {
-                  "type": "textAnswer",
+                  //miembro del DvT
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Un miembro designado del Dev Team"
+                  "data": "https://i.imgur.com/2pzDVOU.jpg"
                 }
               ]
             },
@@ -794,27 +792,25 @@
             {
               "code": "3.2.2",
               "title": "¿Cuál es la duración de la Daily?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  //30min
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "30 minutos"
+                  "data": "https://i.imgur.com/ZOLIWoT.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //15min
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "15 minutos"
+                  "data": "https://i.imgur.com/GfkjjyL.png"
                 },
                 {
-                  "type": "textAnswer",
+                  //lo necesario
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Lo que sea necesario"
-                },
-                {
-                  "type": "textAnswer",
-                  "isCorrect": false,
-                  "data": "2 minutos por persona"
+                  "data": "https://i.imgur.com/dNWBVi4.jpg"
                 }
               ]
             },
@@ -975,27 +971,31 @@
             {
               "code": "3.3.3",
               "title": "En un Sprint de 2 semanas,¿cuál es la duración de la Sprint Planning?",
-              "type": "textQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  //4
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "4 horas"
+                  "data": "https://i.imgur.com/cttRMn2.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //1
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "1 hora"
+                  "data": "https://i.imgur.com/SnXemEz.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //lo que sea
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Lo que sea necesario"
+                  "data": "https://i.imgur.com/zU1ydwR.jpg"
                 },
                 {
-                  "type": "textAnswer",
+                  //24 hs
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Todo el dia"
+                  "data": "https://i.imgur.com/NLkFr41.jpg"
                 }
               ]
             },
@@ -1100,17 +1100,19 @@
             {
               "code": "3.4.3",
               "title": "Si surge una queja de parte de algún participante externo sobre las prioridades, ¿a quién debería estar dirigida?",
-              "type": "shortTextQuiz",
+              "type": "imageQuiz",
               "content": [
                 {
-                  "type": "textAnswer",
+                  //po
+                  "type": "imageAnswer",
                   "isCorrect": true,
-                  "data": "Product Owner"
+                  "data": "https://i.imgur.com/zV0bCF6.png"
                 },
                 {
-                  "type": "textAnswer",
+                  //dev
+                  "type": "imageAnswer",
                   "isCorrect": false,
-                  "data": "Development Team"
+                  "data": "https://i.imgur.com/Evfe88O.jpg"
                 }
               ]
             },

@@ -11,14 +11,36 @@
     <title>Scrum Game</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-    <a class="navbar-brand" href="inicio">Scrum Game</a>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        {if isset($username)}
-            <div class="navbar-nav ml-auto">
-                <a class="nav-item nav-link" href="logout">Cerrar Sesion</a>
-            </div>
-        {/if}
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav auto">
+              <li class="nav-item active ">
+                <a class="nav-link scrum-nav" id="" href="saveJugador">Scrum Game<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active ">
+                <a class="nav-link" id="" href="saveJugador">Pedir acceso<span class="sr-only">(current)</span></a>
+              </li>
+               <!-- formulario de acceso al juego -->          
+              {if !isset ($username)} 
+                <li class="nav-item active ">
+                  <a class="nav-link" id="" href="login">Iniciar Sesion <span class="sr-only">(current)</span></a>
+                </li>
+              {/if}
+               {if isset ($username)}
+                <li class="nav-item active ">
+                  <a class="nav-link" id="" href="verListaUsuarios">Usuarios <span class="sr-only">(current)</span></a>
+                </li>
+              {/if} 
+                <!-- iniciar sesion -- a la vista de todes-->
+        
+                {if isset ($username)}
+                <li class="navbar-nav ml-active ">
+                    <span class="navbar-text">{$username}</span>
+                    <a class="nav-item nav-link" href="logout">Cerrar Sesion</a>
+                </li>
+                {/if}
+               <!-- cerrar sesion -- solo para admin-->
+
+            </ul>
+        </div>
     </nav>
-    

@@ -15,6 +15,8 @@ public class UserEntity implements RealmModel {
 
     private String profession;
 
+    private int puntaje = 100;
+
     @PrimaryKey
     private String uid;
 
@@ -70,6 +72,14 @@ public class UserEntity implements RealmModel {
         this.uid = uid;
     }
 
+    public void setPuntaje(int puntaje) {
+        this.puntaje = puntaje;
+    }
+
+    public int getPuntaje() {
+        return puntaje;
+    }
+
     public UserEntity(String name, String mail, int age, String profession, String uid, String city, String gender, String state, String country, String gameTasteLevel, String gameTimeLevel) {
         this.name = name;
         this.mail = mail;
@@ -82,6 +92,7 @@ public class UserEntity implements RealmModel {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
+        this.puntaje = 100;
     }
 
     public UserEntity() {

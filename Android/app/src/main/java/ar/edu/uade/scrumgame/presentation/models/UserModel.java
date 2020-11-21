@@ -24,6 +24,7 @@ public class UserModel {
 
     private String gameTimeLevel;
 
+
     public String getName() {
         return name;
     }
@@ -64,6 +65,7 @@ public class UserModel {
         this.uid = uid;
     }
 
+
     public UserModel(String name, String mail, int age, String profession, String uid, String city, String gender, String state, String country, String gameTasteLevel, String gameTimeLevel) {
         this.name = name;
         this.mail = mail;
@@ -76,6 +78,7 @@ public class UserModel {
         this.country = country;
         this.gameTasteLevel = gameTasteLevel;
         this.gameTimeLevel = gameTimeLevel;
+
     }
 
     public UserModel() {

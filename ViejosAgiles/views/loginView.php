@@ -26,8 +26,6 @@ class LoginView
     {
         $this->smarty->assign('titulo', 'Pedir Acceso');
         $this->smarty->assign('error', $error);
-        //  $this->smarty->assign('inmuebles', $inmuebles);
-        //$this->smarty->assign('categorias', $categorias);
         $this->smarty->display('templates/registroJugador.tpl');
     }
 

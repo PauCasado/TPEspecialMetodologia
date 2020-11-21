@@ -28,9 +28,13 @@ import ar.edu.uade.scrumgame.presentation.presenter.MenuPresenter;
 import ar.edu.uade.scrumgame.presentation.view.LevelListView;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsAdapter;
 import ar.edu.uade.scrumgame.presentation.view.adapter.LevelsLayoutManager;
+
+
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 import com.squareup.picasso.Picasso;
 
 public class MenuFragment extends BaseFragment implements LevelListView {
@@ -38,6 +42,9 @@ public class MenuFragment extends BaseFragment implements LevelListView {
         void onLevelClicked(LevelModel levelModel);
 
         void navigateToProfile(UserModel loggedInUser);
+
+        void tabla();
+
     }
 
     @Inject
@@ -54,6 +61,9 @@ public class MenuFragment extends BaseFragment implements LevelListView {
     Button retryButton;
     @BindView(R.id.iv_profile_picture)
     ImageView profilePicture;
+    @BindView(R.id.tabla_pos)
+    Button tabla_posiciones;
+
     private LevelListListener levelListListener;
 
     @Override
@@ -117,7 +127,7 @@ public class MenuFragment extends BaseFragment implements LevelListView {
             int placeholderDrawable = gender.equals(UserGenderConstant.FEMALE) ? R.drawable.female_avatar : R.drawable.male_avatar;
             Picasso.get().load(placeholderDrawable).into(profilePicture);
             profilePicture.setOnClickListener(v -> {
-                this.levelListListener.navigateToProfile(loggedInUser);             
+                this.levelListListener.navigateToProfile(loggedInUser);
             });
         }
     }
@@ -158,6 +168,14 @@ public class MenuFragment extends BaseFragment implements LevelListView {
     public void onButtonRetryClick() {
         this.loadLevelList();
     }
+
+    @OnClick(R.id.tabla_pos)
+    public void clickEvent() {
+
+        this.levelListListener.tabla();
+    }
+
+
 
     @Override
     public void onResume() {

@@ -1,11 +1,13 @@
 package ar.edu.uade.scrumgame.presentation.models;
 
 import java.util.List;
+import java.util.Vector;
 
 public class LevelModel {
     private String name;
     private Integer code;
     private List<SubLevelModel> sublevels;
+    protected Vector<UserModel> vectorUsuarios;
 
     public LevelModel() {
     }
@@ -41,6 +43,7 @@ public class LevelModel {
         int subLevelsCompleted = calculateSubslevelsCompleted(progressModel);
         int currentSublevelPercentage = calculateCurrentSublevelPercentage(progressModel);
         int doneSofar = subLevelsCompleted * 100 + currentSublevelPercentage;
+
         return doneSofar * 100 / total;
     }
 

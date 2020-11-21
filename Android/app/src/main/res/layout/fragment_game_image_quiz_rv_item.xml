@@ -16,13 +16,14 @@
             android:gravity="center"/>
 
     <ImageView
-            android:id="@+id/picture_iv"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/image_quiz_cd"
-            android:layout_marginLeft="5dp"
-            android:layout_marginStart="5dp"
-            android:layout_weight="5"
-            android:adjustViewBounds="true"
-            tools:srcCompat="@tools:sample/backgrounds/scenic[0]" android:padding="5dp"/>
+        android:id="@+id/picture_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="5"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_quiz_cd"
+        android:padding="5dp"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
 </LinearLayout>

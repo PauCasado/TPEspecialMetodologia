@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Window;
+import android.widget.Button;
+import android.widget.EditText;
 
 import ar.edu.uade.scrumgame.presentation.models.UserModel;
 
@@ -13,6 +15,8 @@ import ar.edu.uade.scrumgame.presentation.di.components.DaggerLevelComponent;
 import ar.edu.uade.scrumgame.presentation.di.components.LevelComponent;
 import ar.edu.uade.scrumgame.presentation.models.LevelModel;
 import ar.edu.uade.scrumgame.presentation.view.fragment.MenuFragment;
+import butterknife.BindView;
+import butterknife.OnClick;
 
 public class MenuActivity extends BaseActivity implements HasComponent<LevelComponent>, MenuFragment.LevelListListener {
 
@@ -65,5 +69,12 @@ public class MenuActivity extends BaseActivity implements HasComponent<LevelComp
                     MenuActivity.super.onBackPressed();
                     finishAffinity();
                 });
+    }
+
+    @Override
+    public void tabla() {
+        Intent intent = new Intent(MenuActivity.this,PosicionesActivity.class);
+        startActivity(intent);
+
     }
 }

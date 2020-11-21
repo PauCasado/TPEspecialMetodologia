@@ -3,6 +3,8 @@ package ar.edu.uade.scrumgame.presentation.view.fragment;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,8 +29,10 @@ import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 
 public class ProfileFragment extends BaseFragment implements ProfileView {
+    private String url;
     public interface ProfileListener {
         void onLoggedOut();
+        void verLogros();
     }
 
     @Inject
@@ -54,11 +58,13 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
     @BindView(R.id.information_chip)
     Chip information;
     @BindView(R.id.achievements_chip)
-    Chip achievements;
+    Button achievements;
     @BindView(R.id.profile_picture_iv)
     ImageView profilePicture;
     @BindView(R.id.app_version_tv)
     AppCompatTextView appVersion;
+    @BindView(R.id.encuesta)
+    Button encuesta;
     private ProfileListener profileListener;
 
     public static Fragment newInstance() {
@@ -94,9 +100,12 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
 
     private void setUpViews() {
         this.information.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.information, isChecked));
-        this.achievements.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedChipStyle(this.achievements, isChecked));
+
+//        this.achievements.setOnCheckedChangeListener((buttonView, isChecked) -> ProfileFragment.this.changeSelectedButtonStyle(this.achievements, isChecked));
+
         this.information.setSelected(true);
         this.information.setChecked(true);
+
     }
 
     private void changeSelectedChipStyle(Chip chip, boolean isChecked) {
@@ -106,6 +115,15 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
             chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.jelly));
         }
     }
+
+    private void changeSelectedButtonStyle(Chip chip, boolean isChecked) {
+        if (isChecked) {
+            chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.white));
+        } else {
+            chip.setTextColor(ContextCompat.getColor(getActivity(), R.color.jelly));
+        }
+    }
+
 
     @Override
     public void onDetach() {
@@ -175,6 +193,19 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
     public void goBack() {
         this.getActivity().onBackPressed();
     }
+
+    @OnClick(R.id.achievements_chip)
+    public void logros(){this.profileListener.verLogros();}
+
+    @OnClick(R.id.encuesta)
+    public void clickEvent() {
+        url="http://192.168.100.100/ViejosAgiles/saveJugador";
+        Uri uri = Uri.parse(url);
+        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        startActivity(intent);
+
+    }
+
 
     @Override
     public void profileLoaded(UserModel userProfile) {

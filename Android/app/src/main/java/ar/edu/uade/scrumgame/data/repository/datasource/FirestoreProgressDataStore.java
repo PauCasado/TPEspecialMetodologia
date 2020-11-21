@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -14,7 +15,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.WriteBatch;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import ar.edu.uade.scrumgame.data.entity.ProgressEntity;
 import io.reactivex.Observable;
@@ -36,6 +39,11 @@ class FirestoreProgressDataStore implements RemoteProgressDataStore {
                 String currentUserEmail = currentUser.getEmail();
                 String levelKey = String.format("level_%d", progressEntity.getLevelId());
                 FirebaseFirestore firebaseFirestore = FirebaseFirestore.getInstance();
+                /*Map<String, Object> map = new HashMap<>();
+                map.put("id_jugador", 1);
+                map.put("nombre", currentUserEmail);
+                map.put("puntaje", 333);
+                firebaseFirestore.collection("tabla_posiciones").document().set(map);*/
                 firebaseFirestore.collection(String.format("users/%s/levels", currentUserEmail))
                         .document(levelKey)
                         .set(progressEntity)

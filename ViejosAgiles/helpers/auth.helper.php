@@ -16,10 +16,14 @@ class AuthHelper{
         session_destroy();
     }
     public function chequearUsuarioRegistrado(){
-        if(!isset($_SESSION['id_usuario'])){
+        if (isset($_SESSION['id_usuario']))
+            return TRUE;
+        else
+            return FALSE;
+        /*if(isset($_SESSION['id_usuario'])&&($_SESSION['usuario_admin'])==1)
             header('Location:' . LOGIN);
             die();
-        }
+        */
     }
     public function obternerNombreUsuario(){
         if (isset($_SESSION['nombre']))    
@@ -34,9 +38,11 @@ class AuthHelper{
 
     }
     public function obtenerTipoUsuario(){
-        if (isset($_SESSION['usuario_admin']))    
-            return $_SESSION['usuario_admin'];
-        else return null;
-
+        if (isset($_SESSION['usuario_admin'])){
+            return TRUE;
+        }
+        else{
+            return FALSE;       
+        }
     }
 }

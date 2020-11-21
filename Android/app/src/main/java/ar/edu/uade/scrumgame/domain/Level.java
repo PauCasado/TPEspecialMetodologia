@@ -6,6 +6,8 @@ public class Level {
     private String name;
     private Integer code;
     private List<SubLevel> sublevels;
+    private int puntaje_nivel = 222;
+
 
     public Level() {
     }
@@ -32,5 +34,9 @@ public class Level {
 
     public void setSublevels(List<SubLevel> sublevels) {
         this.sublevels = sublevels;
+    }
+
+    public int getPuntaje_nivel() {
+        return puntaje_nivel;
     }
 }
