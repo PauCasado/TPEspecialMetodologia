@@ -40,6 +40,12 @@ class LoginView
         $this->smarty->display('templates/viewMsg.tpl');  
     }
 
+    public function showEncuestaJugador($error = null)
+    {
+        $this->smarty->assign('titulo', 'Encuesta');
+        $this->smarty->assign('error', $error);
+        $this->smarty->display('templates/encuestaJugador.tpl');
+    }
 
     // {if($usuario->usuario_admin==$producto->id_categoria_fk)} selected {/if}>              
 }

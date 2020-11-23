@@ -1,7 +1,7 @@
 {include 'templates/header.tpl'}
  
   <h2>Encuesta sobre ScrumGame</h2>
-  <form action="enviarEncuesta" class="encuesta" method="POST">
+  <form action="enviarEncuesta" class="formularioEnvio" method="POST">
 
     <div class="form-group">
       <label > Escriba su correo electronico </label>
@@ -11,32 +11,32 @@
 
     <div class="form-group">
       <label>¿Cómo te pareció la información que se muestra durante todo el juego?</label>
-      <input type="radio" name="preg1" value="r1.1" valueclass="form-control" id="preg1"/>
-      Imprescindible, gracias a ella fue más fácil aprender la metodología.
-      <input type="radio" name="preg1" value="r1.2" valueclass="form-control" id="preg1"/>
-      Buena y útil, muestra info importantes.
-      <input type="radio" name="preg1" value="r1.3" valueclass="form-control" id="preg1"/>
-      Confusa, no entendía que significaban algunas cosas.
+       <p><input type="radio" name="preg1" value="r1.1" valueclass="form-control" id="preg1"/>
+      Imprescindible, gracias a ella fue más fácil aprender la metodología.</p>
+      <p><input type="radio" name="preg1" value="r1.2" valueclass="form-control" id="preg1"/>
+      Buena y útil, muestra info importantes.</p>
+      <p><input type="radio" name="preg1" value="r1.3" valueclass="form-control" id="preg1"/>
+      Confusa, no entendía que significaban algunas cosas.</p>
     </div>
 
     <div class="form-group">
       <label >Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar? </label>
-      <textarea class="datos" name="preg2" cols="23" rows="7"
+      <textarea class="datos" name="preg2" cols="70" rows="7"
           placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 
     <div class="form-group">
       <label>¿Qué te pareció la navegabilidad del juego?</label>
-      <input type="radio" name="preg3" value="r3.1" valueclass="form-control" id="preg3"/>
-      Fácil de usar.
-      <input type="radio" name="preg3" value="r3.2" valueclass="form-control" id="preg3"/>
-       La primera vez me costó entenderlo, pero después lo usé sin problemas.
-      <input type="radio" name="preg3" value="r3.3" valueclass="form-control" id="preg3"/>
-      Siempre que lo iba a usar me costaba entenderlo.
+      <p><input type="radio" name="preg3" value="r3.1" valueclass="form-control" id="preg3"/>
+      Fácil de usar.</p>
+      <p><input type="radio" name="preg3" value="r3.2" valueclass="form-control" id="preg3"/>
+       La primera vez me costó entenderlo, pero después lo usé sin problemas.</p>
+      <p><input type="radio" name="preg3" value="r3.3" valueclass="form-control" id="preg3"/>
+      Siempre que lo iba a usar me costaba entenderlo.</p>
     </div>
     
     <div class="form-group">
-      <label>¿Utilizaste la sección Mi Perfil? </label>
+      <label>¿Visitaste la sección Logros? </label>
       <select name="preg4"class="form-control" id="preg4">
         <option>SI</option>
         <option>NO</option>
@@ -44,13 +44,13 @@
     </div>
 
     <div class="form-group">
-      <label>Si tu respuesta fue afirmativa, ¿cómo te resultó su utilización?</label>
-      <input type="radio" name="preg5" value="r5.1" valueclass="form-control" id="preg5"/>
-      Fácil.
-      <input type="radio" name="preg5" value="r5.2" valueclass="form-control" id="preg5"/>
-       Fácil, pero de difícil acceso.
-      <input type="radio" name="preg5" value="r5.3" valueclass="form-control" id="preg5"/>
-      Complejo.
+      <label>¿cómo te resultó la utilización de la sección Mi Perfil?</label>
+      <p><input type="radio" name="preg5" value="r5.1" valueclass="form-control" id="preg5"/>
+      Fácil.</p>
+      <p><input type="radio" name="preg5" value="r5.2" valueclass="form-control" id="preg5"/>
+       Fácil, pero de difícil acceso.</p>
+      <p><input type="radio" name="preg5" value="r5.3" valueclass="form-control" id="preg5"/>
+      Complejo.</p>
     </div>
 
     <div class="form-group">
@@ -73,28 +73,27 @@
     
     <div class="form-group">
       <label >Mejoras o sugerencias para enriquecer el juego</label>
-      <textarea class="datos" name="preg8" cols="23" rows="7"
+      <textarea class="datos" name="preg8" cols="70" rows="7"
         placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 
     <div class="form-group">
-      <label>Según tu experiencia en el uso de la aplicación, ¿qué mejoras/sugerencias recomendarías?</label>
-      <textarea class="datos" name="preg9" cols="23" rows="7"
+      <label>Contanos, ¿que otras metodologias agiles conoces?</label>
+      <textarea class="datos" name="preg9" cols="70" rows="7"
         placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 
     <div class="form-group">
     <label>¿Qué es lo que más te gustó del juego?</label>
-      <form>
-          <input type="checkbox" name="preg10" value="jugabilidad"/> Jugabilidad
-          <input type="checkbox" name="preg10" value="estetica"/> Estética
-          <input type="checkbox" name="preg10" value="contenido"/>Contenido
-      </form>
+          <p><input type="checkbox" name="preg10" value="jugabilidad"/> Jugabilidad</p>
+          <p><input type="checkbox" name="preg10" value="estetica"/> Estética</p>
+          <p><input type="checkbox" name="preg10" value="contenido"/> Contenido</p>
     </div>
 
     <div class="enviar">
     <button type="submit" class="btn btn-primary">Enviar</button>
     </div>
+
   </form>
 
 {include 'templates/footer.tpl'}

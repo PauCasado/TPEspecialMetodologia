@@ -1,6 +1,7 @@
 <?php
 require_once("phpmailer/class.phpmailer.php");
 require_once("phpmailer/class.smtp.php");
+
     class MailHelper{
 
         public function __construct(){
@@ -33,9 +34,8 @@ require_once("phpmailer/class.smtp.php");
         <h1>Solicitud de acceso aceptada</h1>
 
         <p>Usuario: {$username}</p>
-         <p>Clave: {$token}</p>
+        <p>Clave: {$token}</p>
       
-
         </body> 
 
         </html>
@@ -75,7 +75,7 @@ require_once("phpmailer/class.smtp.php");
             $mail->FromName = $nombre;
             $mail->AddAddress($direccion); // Direccion de mail donde enviamos
             $mail->Subject = "Invitacion a Scrum game"; // Este es el titulo del email.
-          $mail->Body= "
+            $mail->Body= "
             <html> 
     
             <body> 
@@ -124,12 +124,12 @@ require_once("phpmailer/class.smtp.php");
             <label>¿Cómo te pareció la información que se muestra durante todo el juego?: $p1</label>
             <label>Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar?: $p2</label>
             <label>¿Qué te pareció la navegabilidad del juego?: $p3</label>
-            <label>¿Utilizaste la sección Mi Perfil?: $p4</label>
-            <label>Si tu respuesta fue afirmativa, ¿cómo te resultó su utilización?: $p5</label>
+            <label>¿Utilizaste la sección Logros?: $p4</label>
+            <label>¿cómo te resultó la utilización de la sección Mi Perfil?: $p5</label>
             <label>En la sección Mi Perfil, se encuentra la información personal, mi imagen de perfil, Logros ¿te gustaría que éstas estén separadas en distintas opciones de menú?: $p6 </label>
             <label>¿Te gustaría que salgan nuevas actualizaciones en el juegos?: $p7</label>
             <label >Mejoras o sugerencias para enriquecer el juego: $p8</label>
-            <label>Según tu experiencia en el uso de la aplicación, ¿qué mejoras/sugerencias recomendarías?: $p9</label>
+            <label>Contanos, ¿que otras metodologias agiles conoces?: $p9</label>
             <label>¿Qué es lo que más te gustó del juego?: $p10</label>
 
             </body> 

@@ -133,6 +133,11 @@ class LoginController
         }
     }
 
+    public function showEncuestaJugador(){
+        // se las paso a la vista
+        $this->view->showEncuestaJugador();
+    }
+    
     public function enviarEncuesta(){
         $email = $_POST['email'];
         $p1 = $_POST['preg1'];
@@ -145,11 +150,18 @@ class LoginController
         $p8 = $_POST['preg8'];
         $p9 = $_POST['preg9'];
         $p10 = $_POST['preg10'];
-        $sendEncuesta= $this->mailHelper->sendEncuesta($email,$p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10);
-        if($sendEncuesta){
-            $this->view->viewMensaje("Encuesta enviada" );
-        }else{
-            $this->view->viewMensaje("Error, no se pudo enviar la encuesta");
+        if (!empty($email) && !empty($p1) && !empty($p2)&& !empty($p3)&& !empty($p4)
+        && !empty($p5) && !empty($p6)&& !empty($p7)&& !empty($p8)&& !empty($p9)&& !empty($p10)){
+            $sendEncuesta= $this->mailHelper->sendEncuesta($email,$p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10);
+            if($sendEncuesta){
+                $this->view->viewMensaje("Encuesta enviada" );
+            }else{
+                $this->view->viewMensaje("Error, no se pudo enviar la encuesta");
+            }
+        }else {
+            $this->view->viewMensaje("Hay campos sin completar");
         }
     }
+
+    
 }
