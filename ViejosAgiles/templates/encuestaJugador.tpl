@@ -22,11 +22,11 @@
 
     <div class="form-group">
       <label>¿Cómo te pareció la información que se muestra durante todo el juego?</label>
-       <p><input type="radio" name="preg1" value="r1.1" valueclass="form-control" id="preg1"/>
+       <p><input type="radio" name="preg1" value="Imprescindible" valueclass="form-control" id="preg1" required="true"/>
       Imprescindible, gracias a ella fue más fácil aprender la metodología.</p>
-      <p><input type="radio" name="preg1" value="r1.2" valueclass="form-control" id="preg1"/>
+      <p><input type="radio" name="preg1" value="Buena y útil, muestra info importantes" valueclass="form-control" id="preg1" required="true"/>
       Buena y útil, muestra info importantes.</p>
-      <p><input type="radio" name="preg1" value="r1.3" valueclass="form-control" id="preg1"/>
+      <p><input type="radio" name="preg1" value=" Confusa, no entendía que significaban algunas cosas." valueclass="form-control" id="preg1" required="true"/>
       Confusa, no entendía que significaban algunas cosas.</p>
     </div>
 
@@ -38,11 +38,11 @@
 
     <div class="form-group">
       <label>¿Qué te pareció la navegabilidad del juego?</label>
-      <p><input type="radio" name="preg3" value="r3.1" valueclass="form-control" id="preg3"/>
+      <p><input type="radio" name="preg3" value="Fácil de usar" valueclass="form-control" id="preg3"required="true"/>
       Fácil de usar.</p>
-      <p><input type="radio" name="preg3" value="r3.2" valueclass="form-control" id="preg3"/>
+      <p><input type="radio" name="preg3" value="La primera vez me costó entenderlo, pero después lo usé sin problemas" valueclass="form-control" id="preg3"/>
        La primera vez me costó entenderlo, pero después lo usé sin problemas.</p>
-      <p><input type="radio" name="preg3" value="r3.3" valueclass="form-control" id="preg3"/>
+      <p><input type="radio" name="preg3" value="Siempre que lo iba a usar me costaba entenderlo." valueclass="form-control" id="preg3"required="true"/>
       Siempre que lo iba a usar me costaba entenderlo.</p>
     </div>
     
@@ -56,11 +56,11 @@
 
     <div class="form-group">
       <label>¿cómo te resultó la utilización de la sección Mi Perfil?</label>
-      <p><input type="radio" name="preg5" value="r5.1" valueclass="form-control" id="preg5"/>
+      <p><input type="radio" name="preg5" value=" Fácil." valueclass="form-control" id="preg5" required="true"/>
       Fácil.</p>
-      <p><input type="radio" name="preg5" value="r5.2" valueclass="form-control" id="preg5"/>
+      <p><input type="radio" name="preg5" value="Fácil, pero de difícil acceso." valueclass="form-control" id="preg5"/>
        Fácil, pero de difícil acceso.</p>
-      <p><input type="radio" name="preg5" value="r5.3" valueclass="form-control" id="preg5"/>
+      <p><input type="radio" name="preg5" value="Complejo." valueclass="form-control" id="preg5" required="true"/>
       Complejo.</p>
     </div>
 
@@ -96,9 +96,9 @@
 
     <div class="form-group">
     <label>¿Qué es lo que más te gustó del juego?</label>
-          <p><input type="checkbox" name="preg10" value="jugabilidad"/> Jugabilidad</p>
-          <p><input type="checkbox" name="preg10" value="estetica"/> Estética</p>
-          <p><input type="checkbox" name="preg10" value="contenido"/> Contenido</p>
+          <p><input type="radio" name="preg10" value="jugabilidad" required="true"/> Jugabilidad</p>
+          <p><input type="radio" name="preg10" value="estetica" required="true"/> Estética</p>
+          <p><input type="radio" name="preg10" value="contenido" required="true" /> Contenido</p>
     </div>
 
     <div class="enviar">
