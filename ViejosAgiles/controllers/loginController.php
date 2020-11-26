@@ -152,12 +152,14 @@ class LoginController
         $p10 = $_POST['preg10'];
         if (!empty($email) && !empty($p1) && !empty($p2)&& !empty($p3)&& !empty($p4)
         && !empty($p5) && !empty($p6)&& !empty($p7)&& !empty($p8)&& !empty($p9)&& !empty($p10)){
+          
             $sendEncuesta= $this->mailHelper->sendEncuesta($email,$p1, $p2, $p3, $p4, $p5, $p6, $p7, $p8, $p9, $p10);
-            if($sendEncuesta){
+      
+             if($sendEncuesta){
                 $this->view->viewMensaje("Encuesta enviada" );
             }else{
                 $this->view->viewMensaje("Error, no se pudo enviar la encuesta");
-            }
+            } 
         }else {
             $this->view->viewMensaje("Hay campos sin completar");
         }

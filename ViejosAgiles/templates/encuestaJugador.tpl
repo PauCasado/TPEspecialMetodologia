@@ -32,7 +32,7 @@
 
     <div class="form-group">
       <label >Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar? </label>
-      <textarea class="datos" name="preg2" cols="70" rows="7"
+      <textarea class="datos" name="preg2" 
           placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 
@@ -84,13 +84,13 @@
     
     <div class="form-group">
       <label >Mejoras o sugerencias para enriquecer el juego</label>
-      <textarea class="datos" name="preg8" cols="70" rows="7"
+      <textarea class="datos" name="preg8" 
         placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 
     <div class="form-group">
       <label>Contanos, ¿que otras metodologias agiles conoces?</label>
-      <textarea class="datos" name="preg9" cols="70" rows="7"
+      <textarea class="datos" name="preg9"
         placeholder="Escriba aqui su respuesta..."></textarea>
     </div>
 

@@ -199,7 +199,7 @@ public class ProfileFragment extends BaseFragment implements ProfileView {
 
     @OnClick(R.id.encuesta)
     public void clickEvent() {
-        url="http://192.168.100.100/ViejosAgiles/saveJugador";
+        url="http://192.168.100.100/ViejosAgiles/encuestaJugador";
         Uri uri = Uri.parse(url);
         Intent intent = new Intent(Intent.ACTION_VIEW, uri);
         startActivity(intent);

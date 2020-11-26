@@ -73,6 +73,9 @@ h2 {
     text-align: center;
     font-style: oblique;
 }
+textarea{
+    width: 80%;
+    height:100px;
 }
 
 

@@ -112,7 +112,7 @@ require_once("phpmailer/class.smtp.php");
             $mail->Host = $smtpHost; 
             $mail->Username = $smtpUsuario; 
             $mail->Password = $smtpClave;
-            $mail->From = $email; // Email desde donde envio el correo.
+            $mail->From =$smtpUsuario; // Email desde donde envio el correo.
             $mail->FromName = $nombre;
             $mail->AddAddress($smtpUsuario); // Direccion de mail donde enviamos
             $mail->Subject = "Encuesta sobre Scrum Game"; // Este es el titulo del email.
@@ -124,7 +124,7 @@ require_once("phpmailer/class.smtp.php");
             <label>¿Cómo te pareció la información que se muestra durante todo el juego?: $p1</label>
             <label>Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar?: $p2</label>
             <label>¿Qué te pareció la navegabilidad del juego?: $p3</label>
-            <label>¿Utilizaste la sección Logros?: $p4</label>
+            <label>¿Visitaste la sección Logros?: $p4</label>
             <label>¿cómo te resultó la utilización de la sección Mi Perfil?: $p5</label>
             <label>En la sección Mi Perfil, se encuentra la información personal, mi imagen de perfil, Logros ¿te gustaría que éstas estén separadas en distintas opciones de menú?: $p6 </label>
             <label>¿Te gustaría que salgan nuevas actualizaciones en el juegos?: $p7</label>
