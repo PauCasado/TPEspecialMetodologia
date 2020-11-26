@@ -119,18 +119,17 @@ require_once("phpmailer/class.smtp.php");
           $mail->Body= "
             <html> 
             <body> 
-            
-            REVISAR QUE LAS VARIABLES TRAIGAN LAS RESPUESTAS
-            <label>¿Cómo te pareció la información que se muestra durante todo el juego?: $p1</label>
-            <label>Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar?: $p2</label>
-            <label>¿Qué te pareció la navegabilidad del juego?: $p3</label>
-            <label>¿Visitaste la sección Logros?: $p4</label>
-            <label>¿cómo te resultó la utilización de la sección Mi Perfil?: $p5</label>
-            <label>En la sección Mi Perfil, se encuentra la información personal, mi imagen de perfil, Logros ¿te gustaría que éstas estén separadas en distintas opciones de menú?: $p6 </label>
-            <label>¿Te gustaría que salgan nuevas actualizaciones en el juegos?: $p7</label>
-            <label >Mejoras o sugerencias para enriquecer el juego: $p8</label>
-            <label>Contanos, ¿que otras metodologias agiles conoces?: $p9</label>
-            <label>¿Qué es lo que más te gustó del juego?: $p10</label>
+
+            <label>¿Cómo te pareció la información que se muestra durante todo el juego?:<p> $p1</p></label>
+            <label>Además de la información de la tabla de posiciones y ver tus logros ¿qué otra información agregarías para que te incentive a jugar?:<p> $p2</p></label>
+            <label>¿Qué te pareció la navegabilidad del juego?: <p>$p3</p></label>
+            <label>¿Visitaste la sección Logros?: <p>$p4</p></label>
+            <label>¿cómo te resultó la utilización de la sección Mi Perfil?:<p> $p5</p></label>
+            <label>En la sección Mi Perfil, se encuentra la información personal, mi imagen de perfil, Logros ¿te gustaría que éstas estén separadas en distintas opciones de menú?:<p> $p6 </p></label>
+            <label>¿Te gustaría que salgan nuevas actualizaciones en el juegos?: <p>$p7</p></label>
+            <label >Mejoras o sugerencias para enriquecer el juego: <p>$p8</p></label>
+            <label>Contanos, ¿que otras metodologias agiles conoces?: <p>$p9</p></label>
+            <label>¿Qué es lo que más te gustó del juego?:<p> $p10</p></label>
 
             </body> 
             </html>
